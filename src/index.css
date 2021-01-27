@@ -4,6 +4,9 @@
 
 body {
     font-family: arial;
+}
+
+#app {
     margin: 10% 30%;
     width: 40%;
 }
@@ -22,6 +25,14 @@ ul li {
 .line {
     text-decoration: line-through;
     font-style: italic;
+}
+
+.all {
+    background-color: rgb(151, 8, 8);
+}
+
+.all:hover {
+    background-color: rgb(83, 11, 11);
 }
 
 .right, .add {
@@ -75,9 +86,11 @@ p, i  {
 }
 
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    width: 40%;
+    width: 100%;
     text-align: center;
-    height: 35px;   /* Height of the footer */
+    background-color: rgb(247, 247, 247);
+    padding: 18px 0px;
+    height: 18px;   /* Height of the footer */
 }

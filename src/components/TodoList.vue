@@ -1,6 +1,6 @@
 <template>
     <ul>
-        <li> <button class="right" @click="DeleteAllItems()"> Delete All </button> </li> <br>
+        <li> <button class="right all" @click="DeleteAllItems()"> Delete All </button> </li> <br>
         <li v-for="item in list" :key="item.id"> 
             <span class="checkbox" :class="[!item.completed ? 'sad' : 'happy']" @click="ToggleCompleted(item)"> 
                 <b v-if="!item.completed"> :( </b>
@@ -10,7 +10,7 @@
             <button class="right" @click="DeleteItem(item)"> Delete </button>
         </li>
         <li> 
-            <input type="text" placeholder="Insert todo.." v-model='newItem' @keyup.enter="AddItem()">
+            <input type="text" placeholder="Insert todo.." v-model='newItem'>
             <button class="add" @click="AddItem()" :disabled="newItem.length == ''"> Add todo </button>
         </li>
     </ul>
